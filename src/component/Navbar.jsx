@@ -34,7 +34,7 @@ const Userbox = styled(Box)(({ theme }) => ({
 
 
 function Navbar() {
-  const [open, setOpen] = useState('false')
+  const [open, setOpen] = useState(false)
   return (
     <AppBar position='sticky'>
       <StyleToolbar>
@@ -42,7 +42,8 @@ function Navbar() {
           Navbar
         </Typography>
         <Diversity3 sx={{ display: { xs: "block", sm: "none" } }} />
-        <Search><InputBase placeholder='search... '></InputBase></Search>
+        
+        <Search sx={{bgcolor:"background.default"}}><InputBase placeholder='search... '></InputBase></Search>
         <Icons>
           <Badge badgeContent={4} color="error">
             <Mail/>
